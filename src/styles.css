@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* CARDS */
+    .card {
+        /* size */
+        @apply my-2 leading-snug;
+        
+        /* background */
+        @apply bg-white;
+        
+        /* borders */
+        @apply border-b border-gray-400;
+        
+        /* special stuff */
+        @apply cursor-pointer rounded;
+    }
+    
+    .card:hover {
+        @apply bg-gray-100;
+    }
+ 
+    /* LISTS */
+    .list {
+        /* size */
+        @apply flex-shrink-0;
+        @apply w-full mb-10 p-3 pb-2;
+
+        /* colors */
+        @apply bg-gray-200 text-gray-800;
+
+        /* special stuff */
+        @apply rounded-lg shadow-xl;
+    }
+    @screen sm {
+        .list {
+            @apply w-80 mx-4 mb-0;
+        }
+    }
+
+    /* BUTTONS */
+    .btn {
+        @apply font-semibold border-b border-gray-600 text-white py-1 px-3 text-shadow rounded;
+    }
+    .btn-green {
+        @apply bg-green-500;
+    }
+    .btn-green:hover,
+    .btn-green:active {
+        @apply bg-green-400;
+    }
+}
+
+
+
+@layer utilities {
+    .text-shadow {
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+    }
+}
